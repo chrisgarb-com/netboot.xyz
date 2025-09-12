@@ -16,11 +16,19 @@ clear older_release
 menu ${os} - ${os_arch}
 item --gap Latest Releases
 {% for item in releases.debian.versions.stable %}
+{% if item.unsupported_arches and "i386" in item.unsupported_arches %}
+iseq ${os_arch} i386 || item {{ item.code_name }} ${space} ${os} {{ item.name }}
+{% else %}
 item {{ item.code_name }} ${space} ${os} {{ item.name }}
+{% endif %}
 {% endfor %}
 item --gap Testing Releases
 {% for item in releases.debian.versions.testing %}
+{% if item.unsupported_arches and "i386" in item.unsupported_arches %}
+iseq ${os_arch} i386 || item {{ item.code_name }} ${space} ${os} {{ item.name }}
+{% else %}
 item {{ item.code_name }} ${space} ${os} {{ item.name }}
+{% endif %}
 {% endfor %}
 item --gap Older Releases
 item older_release ${space} Set release codename...
