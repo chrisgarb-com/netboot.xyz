@@ -833,13 +833,13 @@ endpoints:
     os: proxmox-ve
     version: 9.0-1
   proxmox-mailgateway:
-    path: /asset-mirror/releases/download/8.2-1-8374c64d/
+    path: /asset-mirror/releases/download/9.0-BETA-1-8374c64d/
     files:
     - initrd
     - vmlinuz
     - proxmox.iso
     os: proxmox-mailgateway
-    version: 8.2-1
+    version: 9.0-BETA-1
   ubuntu-netboot-22.04-amd64:
     path: /ubuntu-squash/releases/download/22.04.5-295657f3/
     files:
