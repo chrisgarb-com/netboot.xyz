@@ -72,6 +72,20 @@ iseq ${version} tumbleweed && set dir ${version}/repo/oss ||
 imgfree
 set kernel_url boot/${os_arch}/loader 
 iseq ${os_arch} aarch64 && set kernel_url boot/${os_arch} ||
+
+# openSUSE Leap 16.0+ uses Agama installer instead of YaST
+# Agama requires different kernel parameters
+iseq ${version} 16.0 && goto agama_boot ||
+goto yast_boot
+
+:agama_boot
+kernel ${opensuse_mirror}/${dir}/${kernel_url}/linux ${netsetup} rd.neednet=1 agama.auto=1 ${params} {{ kernel_params }}
+initrd ${opensuse_mirror}/${dir}/${kernel_url}/initrd
+echo MD5sums:
+md5sum linux initrd
+boot
+
+:yast_boot
 kernel ${opensuse_mirror}/${dir}/${kernel_url}/linux ${netsetup} install=${opensuse_mirror}/${dir} ${params} {{ kernel_params }}
 initrd ${opensuse_mirror}/${dir}/${kernel_url}/initrd
 echo MD5sums:
