@@ -1495,7 +1495,7 @@ endpoints:
     version: '20.9'
     kernel: deepin-20-squash
   debian-13-live-kernel:
-    path: /debian-core-13/releases/download/13.0.0-5b34a6ca/
+    path: /debian-core-13/releases/download/13.1.0-0a426450/
     files:
     - initrd
     - vmlinuz
