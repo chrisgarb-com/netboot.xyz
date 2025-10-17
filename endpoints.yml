@@ -1549,3 +1549,14 @@ endpoints:
     version: 13.0.0
     flavor: mate
     kernel: debian-13-live-kernel
+  ubuntu-netboot-25.10-amd64:
+    path: /ubuntu-squash/releases/download/25.10-5a657310/
+    files:
+    - initrd
+    - vmlinuz
+    os: ubuntu
+    version: '25.10'
+    codename: questing
+    flavor: netboot
+    kernel: ubuntu-netboot-25.10-amd64
+    arch: amd64
