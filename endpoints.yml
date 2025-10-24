@@ -1518,11 +1518,11 @@ endpoints:
     flavor: lxde
     kernel: debian-13-live-kernel
   debian-13-kde-squash:
-    path: /debian-squash/releases/download/13.0.0-133921aa/
+    path: /debian-squash/releases/download/13.1.0-5ecf4c90/
     files:
     - filesystem.squashfs
     os: debian
-    version: 13.0.0
+    version: 13.1.0
     flavor: kde
     kernel: debian-13-live-kernel
   debian-13-gnome-squash:
