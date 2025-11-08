@@ -3,7 +3,36 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.0.88] - Unreleased
+## [2.0.89] - 2025-11-08
+
+### Added
+
+- OpenSUSE 16.0 support with live ISO boot method
+- Dasharo Tools Suite updated to v2.7.0 and v2.7.1
+
+### Changed
+
+- Updated Ansible to v12 for improved build system
+- Updated ansible-lint to v24.12.2 with compatibility fixes
+- Various distribution version updates:
+  - Arch Linux updated to 2025.11.01
+  - SmartOS updated to 20251030T000436Z
+  - CoreOS updated to 42.20251012.3.0-stable, 43.20251024.2.0-testing, 43.20251027.1.0-next
+  - IPFire updated to 2.29-core198
+- Improved dependency tracking in GitHub workflows
+- Updated GitHub Actions:
+  - actions/checkout to v5
+  - actions/setup-python to v6
+  - aws-actions/configure-aws-credentials to v5
+
+### Fixed
+
+- OpenSUSE 16.0 boot configuration now uses live ISO method with proper root= parameter
+- Ansible-lint configuration updated to skip var-naming rule for internal variables
+- CI/CD compatibility issues resolved between Ansible and ansible-lint versions
+- Renovate configuration JSON syntax errors corrected
+
+## [2.0.88] - 2025-08-09
 
 ### Added
 
@@ -24,10 +53,6 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Loading of TFTP menu files (fixed HOSTNAME typo): local-vars.ipxe, HOSTNAME-${hostname}.ipxe,
-  MAC-${mac:hexraw}.ipxe, MAC-${mac:hexhyp}.ipxe and custom menu.ipxe from the
-  root of the tftp server. The root `tftp-root-path` is a variable and can be
-  set in `local-vars.ipxe` to override. The default is `/`
 - Fedora CoreOS kernel filename format corrected
 
 ### Removed
