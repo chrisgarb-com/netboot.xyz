@@ -157,8 +157,8 @@ releases:
     mirror: http://dl-cdn.alpinelinux.org
     name: Alpine Linux
     versions:
-    - code_name: v3.22
-      name: '3.22'
+    - code_name: v3.23
+      name: '3.23'
     - code_name: edge
       name: Edge (development)
   archlinux:
@@ -168,8 +168,8 @@ releases:
     mirror: mirrors.kernel.org
     name: Arch Linux
     versions:
-    - code_name: 2025.08.01
-      name: 2025.08.01
+    - code_name: 2025.11.01
+      name: 2025.11.01
   blackarch:
     enabled: true
     menu: linux
@@ -195,11 +195,11 @@ releases:
     mirror: https://builds.coreos.fedoraproject.org
     name: Fedora CoreOS
     versions:
-    - code_name: 42.20250721.3.0
+    - code_name: 42.20251012.3.0
       name: stable
-    - code_name: 42.20250803.2.0
+    - code_name: 43.20251024.2.0
       name: testing
-    - code_name: 42.20250803.1.0
+    - code_name: 43.20251027.1.0
       name: next
   debian:
     archive_mirror: http://archive.debian.org
@@ -291,8 +291,8 @@ releases:
     mirror: https://downloads.ipfire.org
     name: IPFire
     versions:
-    - code_name: 2.29-core196
-      name: 2.29 Core196
+    - code_name: 2.29-core198
+      name: 2.29 Core198
   k3os:
     enabled: true
     menu: linux
@@ -331,7 +331,7 @@ releases:
       name: Ubuntu 24.04
     - key: ubuntu-24.10
       name: Ubuntu 24.10
-    version: v3.5.0
+    version: v3.5.3
   kali:
     base_dir: kali
     enabled: true
@@ -404,15 +404,15 @@ releases:
     mirror: http://ftp.openbsd.org
     name: OpenBSD
     versions:
+    - code_name: '7.7'
+      image_ver: '77'
+      name: '7.7'
     - code_name: '7.6'
       image_ver: '76'
       name: '7.6'
-    - code_name: '7.5'
-      image_ver: '75'
-      name: '7.5'
     - code_name: snapshots
-      image_ver: '76'
-      name: 7.6 Latest Snapshot
+      image_ver: '77'
+      name: 7.7 Latest Snapshot
   opensuse:
     base_dir: distribution/leap
     enabled: true
@@ -420,10 +420,10 @@ releases:
     mirror: http://download.opensuse.org
     name: openSUSE
     versions:
+    - code_name: '16.0'
+      name: openSUSE Leap 16.0
     - code_name: '15.6'
       name: openSUSE Leap 15.6
-    - code_name: '15.5'
-      name: openSUSE Leap 15.5
     - code_name: tumbleweed
       name: openSUSE tumbleweed
   oracle:
@@ -481,14 +481,14 @@ releases:
     mirror: https://netboot.smartos.org/os/
     name: SmartOS
     versions:
-    - code_name: 20250807T000218Z
-      name: 20250807T000218Z
-    - code_name: 20250724T001011Z
-      name: 20250724T001011Z
-    - code_name: 20250710T000436Z
-      name: 20250710T000436Z
-    - code_name: 20250626T191621Z
-      name: 20250626T191621Z
+    - code_name: 20251030T000436Z
+      name: 20251030T000436Z
+    - code_name: 20251016T000143Z
+      name: 20251016T000143Z
+    - code_name: 20251002T000521Z
+      name: 20251002T000521Z
+    - code_name: 20250918T000550Z
+      name: 20250918T000550Z
   talos:
     enabled: true
     menu: linux
@@ -637,6 +637,8 @@ releases:
     mirror: http://archive.ubuntu.com
     name: Ubuntu
     versions:
+    - code_name: questing
+      name: 25.10 Questing Quokka
     - code_name: plucky
       name: 25.04 Plucky Puffin
     - code_name: oracular
