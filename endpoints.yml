@@ -630,13 +630,13 @@ endpoints:
     kernel: clonezilla-debian-stable-amd64
     arch: amd64
   clonezilla-ubuntu-stable-amd64:
-    path: /ubuntu-squash/releases/download/20250620-plucky-24b2fcf3/
+    path: /ubuntu-squash/releases/download/20251017-questing-c0f6109b/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: clonezilla
-    version: 20250620-plucky
+    version: 20251017-questing
     flavor: stable
     kernel: clonezilla-ubuntu-stable-amd64
     arch: amd64
