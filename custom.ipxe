@@ -1,0 +1,35 @@
+#!ipxe
+###
+### {{ site_name }} custom menu example
+###
+
+:custom
+clear custom_choice
+menu This is a Test Menu
+item --gap This is the first sub menu
+item option_one ${space} Loading a kernel and initrd
+item option_two ${space} Loading an ISO
+item --gap This is a second sub menu
+item option_three ${space} Loads another custom sub menu
+item option_four ${space} This is option four
+choose custom_choice || goto custom_exit
+echo ${cls}
+goto ${custom_choice}
+goto custom_exit
+
+:option_one
+kernel http://download.opensuse.org/factory/repo/oss/boot/i386/loader/linux splash=silent install=http://download.opensuse.org/factory/repo/oss/
+initrd http://download.opensuse.org/factory/repo/oss/boot/i386/loader/initrd
+boot || goto custom_exit
+
+:option_two
+kernel {{ memdisk_location }} raw iso
+initrd http://path.to/iso
+boot || goto custom_exit
+
+:option_three
+echo Chains into another menu...
+chain custom1.ipxe || goto custom
+
+:custom_exit
+exit
